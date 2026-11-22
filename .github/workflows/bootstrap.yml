@@ -1,17 +1,26 @@
-name: Bootstrap source tree
+name: Bloxd Ad Monitor
 
 on:
   push:
     branches: [main]
     paths:
       - ".bootstrap.tar.gz.b64"
+      - "bloxd_ad_monitor/**"
+      - "config/**"
+      - ".github/workflows/bootstrap.yml"
+  schedule:
+    - cron: "13,43 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: bloxd-ad-monitor
+  cancel-in-progress: false
+
 jobs:
-  install:
+  scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -19,19 +28,41 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Restore complete project tree
+      - name: Restore initial project files
+        if: ${{ hashFiles('.bootstrap.tar.gz.b64') != '' }}
         run: |
           base64 --decode .bootstrap.tar.gz.b64 | tar -xz --no-same-owner
           rm -f .bootstrap.tar.gz.b64
-          rm -f .github/workflows/bootstrap.yml
-      - name: Validate project
+          # This workflow is the permanent monitor; keep it and remove the
+          # temporary workflow definitions staged inside the bootstrap archive.
+          rm -f .github/workflows/monitor.yml .github/workflows/tests.yml
+      - name: Validate source and tests
         run: |
           python -m compileall -q bloxd_ad_monitor tests
           python -m unittest discover -s tests -v
-      - name: Commit initial implementation
+      - name: Commit initial source tree when bootstrapping
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "feat: implement independent Bloxd ad monitoring"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: implement independent Bloxd ad monitoring"
+            git push
+          fi
+      - name: Scan latest Build Monitor bundles
+        run: >-
+          python -m bloxd_ad_monitor
+          --manifest-url https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
+          --raw-base-url https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/
+          --config config/detectors.json
+          --state .state/scan-cache.json
+          --output-dir .
+      - name: Commit report, cache, and generated filter list
+        run: |
+          git add .state/scan-cache.json reports/latest.json reports/latest.md filters/bloxd-video-adapters.txt
+          if git diff --cached --quiet; then
+            echo "No report or filter changes."
+          else
+            git commit -m "chore: update Bloxd ad scan"
+            git push
+          fi
