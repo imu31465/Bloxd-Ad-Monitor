@@ -7,10 +7,22 @@
       "confidence": "high",
       "description": "Identifies the isolated Nitro video-ad adapter that renders the timed skip control and pauses/resumes the game during the ad.",
       "required_groups": [
-        ["NitroSdkAdaptor", "NitroSdkAdapter"],
-        ["NitroVideoSkip", "NitroOutstreamVideo"],
-        ["Skip ad in", "Skip Ad"],
-        ["adStartSoPause", "adCompleteSoResume"]
+        [
+          "NitroSdkAdaptor",
+          "NitroSdkAdapter"
+        ],
+        [
+          "NitroVideoSkip",
+          "NitroOutstreamVideo"
+        ],
+        [
+          "Skip ad in",
+          "Skip Ad"
+        ],
+        [
+          "adStartSoPause",
+          "adCompleteSoResume"
+        ]
       ],
       "publish_filter": true,
       "filter_note": "Strong signature for the isolated Nitro video interstitial adapter."
@@ -21,12 +33,91 @@
       "confidence": "high",
       "description": "Tracks the Aditude instream-ad adapter, but does not auto-block it because the signature alone does not establish that it owns the timed skip overlay.",
       "required_groups": [
-        ["AditudeSdkAdaptor", "AditudeSDKAdaptor"],
-        ["requestInstreamPlayer", "edge.aditude.io"],
-        ["GenericVideoWrapper"]
+        [
+          "AditudeSdkAdaptor",
+          "AditudeSDKAdaptor"
+        ],
+        [
+          "requestInstreamPlayer",
+          "edge.aditude.io"
+        ],
+        [
+          "GenericVideoWrapper"
+        ]
       ],
       "publish_filter": false,
       "filter_note": "Tracked for visibility only; no automatic blocking rule is generated."
+    },
+    {
+      "id": "coolmathgames-video-adapter",
+      "name": "CoolMathGames video ad adapter",
+      "confidence": "high",
+      "description": "Tracks the CoolMathGames SDK adapter that requests video ad breaks and pauses/resumes gameplay around the ad.",
+      "required_groups": [
+        [
+          "CoolMathGamesSdkAdaptor"
+        ],
+        [
+          "cmg-ads.js",
+          "cmgAdBreak"
+        ],
+        [
+          "adBreakStart",
+          "adBreakComplete"
+        ],
+        [
+          "adStartSoPause",
+          "adCompleteSoResume"
+        ]
+      ],
+      "publish_filter": false,
+      "filter_note": "Tracked for visibility only; the chunk can contain host SDK integration and is not automatically blocked."
+    },
+    {
+      "id": "admob-mobile-adapter",
+      "name": "AdMob mobile ad adapter",
+      "confidence": "high",
+      "description": "Tracks the mobile AdMob adapter that requests rewarded/interstitial ads and controls mobile banner placements.",
+      "required_groups": [
+        [
+          "AdMobSdkAdaptor"
+        ],
+        [
+          "ads.showRewarded",
+          "ads.showInterstitial"
+        ],
+        [
+          "ads.showBanner",
+          "renderBanner"
+        ]
+      ],
+      "publish_filter": false,
+      "filter_note": "Tracked for visibility only; do not block automatically because this is a mobile SDK bridge."
+    },
+    {
+      "id": "adinplay-video-adapter",
+      "name": "AdInPlay video and banner adapter",
+      "confidence": "high",
+      "description": "Tracks the AdInPlay adapter that loads aiptag, requests pre-roll video ads, and renders banner placements.",
+      "required_groups": [
+        [
+          "AdinPlaySdkAdaptor"
+        ],
+        [
+          "api.adinplay.com",
+          "aiptag"
+        ],
+        [
+          "startPreRoll",
+          "adplayer"
+        ],
+        [
+          "renderBanner",
+          "aipDisplayTag"
+        ]
+      ],
+      "publish_filter": false,
+      "filter_note": "Tracked for visibility only; no automatic block rule is generated."
     }
   ]
 }
