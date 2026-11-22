@@ -115,7 +115,7 @@ class ScanTests(unittest.TestCase):
             with self.assertRaises(MonitorError):
                 run_scan(manifest, {"content_cache": {}, "latest": {}}, self.detectors, self.fingerprint, source_root=root)
 
-    def test_cached_hash_is_reused_without_fetch(self) -> None:
+    def test_cached_hash_is_reused_and_stale_entries_are_pruned(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             content = b"NitroSdkAdaptor NitroVideoSkip NitroOutstreamVideo Skip ad in adStartSoPause"
@@ -123,10 +123,19 @@ class ScanTests(unittest.TestCase):
             # The cached match is intentionally sufficient; this path is not present locally.
             manifest = {"bloxd.io": {"build": "test.12345678", "files": [{"path": "bundles/bloxd.io/chunks/js/149.js", "sha256": sha, "identity": "chunk.js:149"}]}}
             matches = detector_matches(content.decode(), self.detectors)
-            state = {"content_cache": {sha: {"detector_fingerprint": self.fingerprint, "matches": matches}}, "latest": {}}
-            report, _ = run_scan(manifest, state, self.detectors, self.fingerprint, source_root=root)
+            state = {"content_cache": {
+                sha: {"detector_fingerprint": self.fingerprint, "matches": matches},
+                "f" * 64: {"detector_fingerprint": self.fingerprint, "matches": []},
+            }, "latest": {}}
+            report, next_state = run_scan(manifest, state, self.detectors, self.fingerprint, source_root=root)
             self.assertEqual(report["summary"]["new_hashes_scanned"], 0)
             self.assertEqual(report["summary"]["filter_rules"], 1)
+            self.assertEqual(set(next_state["content_cache"]), {sha})
+
+    def test_malformed_manifest_entries_abort_scan(self) -> None:
+        manifest = {"bloxd.io": {"build": "test.12345678", "files": [None]}}
+        with self.assertRaises(MonitorError):
+            run_scan(manifest, {"content_cache": {}, "latest": {}}, self.detectors, self.fingerprint)
 
 
 if __name__ == "__main__":
