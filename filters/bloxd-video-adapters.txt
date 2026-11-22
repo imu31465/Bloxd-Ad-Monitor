@@ -2,7 +2,7 @@
 ! Description: Automatically detected high-confidence Bloxd video-ad overlay modules.
 ! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
 ! Expires: 12 hours
-! Last generated: 2026-11-22T14:35:24Z
+! Last generated: 2026-11-22T14:35:35Z
 ! Source manifest: https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
 ! Only isolated, strongly identified lazy-loaded JavaScript chunks are listed.
 ! The main bundle is never blocked automatically.
