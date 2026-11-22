@@ -12,6 +12,8 @@ from bloxd_ad_monitor.core import (
     compare_occurrences,
     detector_matches,
     load_detectors,
+    load_static_filters,
+    render_filter_list,
     run_scan,
 )
 
@@ -57,6 +59,21 @@ class DetectorTests(unittest.TestCase):
 
 
 class FilterTests(unittest.TestCase):
+    def test_combined_list_contains_static_and_dynamic_rules(self) -> None:
+        static = load_static_filters(ROOT / "config/static-filters.txt")
+        dynamic = [{
+            "environment": "bloxd.io",
+            "detector_id": "nitro-video-skip-overlay",
+            "chunk_id": "152",
+            "rule": "||bloxd.io/static/js/*.152.*.chunk.js$script",
+        }]
+        output = render_filter_list(dynamic, "2026-11-23T00:00:00Z", "https://example.test/manifest.json", static)
+        self.assertIn("||adinplay.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io", output)
+        self.assertIn("bloxd.io,preprod.bloxd.io,staging.bloxd.io##.BloxdAdContainer", output)
+        self.assertIn("bloxd.io,preprod.bloxd.io,staging.bloxd.io##+js(aopr, nitroAds)", output)
+        self.assertIn("||bloxd.io/static/js/*.152.*.chunk.js$script", output)
+        self.assertNotIn("*.149.*.chunk.js", output)
+
     def test_filter_is_generated_for_isolated_chunk(self) -> None:
         occurrences = [{
             "environment": "bloxd.io",
