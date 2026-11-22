@@ -8,7 +8,8 @@ Bloxdの新しいビルドを定期確認し、JavaScriptチャンクの中身�
 - Data source: <https://github.com/imu31465/Bloxd-Build-Monitor>（読み取り専用。変更・トークン・Webhook連携は不要）
 - Latest report: [`reports/latest.md`](reports/latest.md)
 - Latest machine-readable report: [`reports/latest.json`](reports/latest.json)
-- Generated filter list: [`filters/bloxd-video-adapters.txt`](filters/bloxd-video-adapters.txt)
+- Generated combined filter list: [`filters/bloxd-video-adapters.txt`](filters/bloxd-video-adapters.txt)
+- Fixed Bloxd rules: [`config/static-filters.txt`](config/static-filters.txt)
 
 ## uBlock Origin Liteでの利用
 
@@ -18,7 +19,11 @@ uBlock Origin Liteの外部フィルターリスト購読に対応した版（20
 https://raw.githubusercontent.com/imu31465/Bloxd-Ad-Monitor/main/filters/bloxd-video-adapters.txt
 ```
 
-このリストは、検証済みの広告アダプターが独立した遅延ロードJSチャンクに存在するときだけ、該当チャンクのURLパターンを出力します。チャンク番号が変われば次回スキャンでルールも更新されます。リストの取得・再取得タイミングはuBlock Origin Liteとブラウザー側の管理に依存するため、GitHub上の生成結果とブラウザーに反映済みのルールが一時的にずれる場合があります。
+このURL **1つ** に、以前使っていた固定のドメインブロック・要素非表示・対応スクリプトレットと、Nitroなどの広告チャンクを追跡して生成する動的ルールをまとめています。固定ルールは `config/static-filters.txt`、チャンクルールはビルド解析から自動生成されます。チャンク番号が変われば次回スキャンで動的ルールだけが更新されます。
+
+要素非表示・スクリプトレットも適用するには、ブラウザーの拡張機能詳細でuBlock Origin Liteの **Allow User Scripts** を有効にし、Bloxdでのフィルタリングモードを **Optimal** または **Complete** にしてください。Basicではネットワークブロックのみが適用されます。外部リストから読み込めるスクリプトレットはuBO Liteに同梱されたものに限られます。
+
+以前の `no-document-write` ルールは、現行の公式uBOスクリプトレット一覧に存在を確認できなかったため、統合リストには含めていません。リストの取得・再取得タイミングはuBlock Origin Liteとブラウザー側の管理に依存するため、GitHub上の生成結果とブラウザーに反映済みのルールが一時的にずれる場合があります。
 
 ## 仕組み
 
