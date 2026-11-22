@@ -2,4 +2,14 @@
 ! Description: Automatically detected high-confidence Bloxd video-ad overlay modules.
 ! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
 ! Expires: 12 hours
-! No rules until the first complete, verified scan succeeds. This is intentionally fail-open.
+! Last generated: 2026-11-22T13:31:26Z
+! Source manifest: https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
+! Only isolated, strongly identified lazy-loaded JavaScript chunks are listed.
+! The main bundle is never blocked automatically.
+
+! bloxd.io — nitro-video-skip-overlay — logical chunk 150
+||bloxd.io/static/js/*.150.*.chunk.js$script
+! preprod.bloxd.io — nitro-video-skip-overlay — logical chunk 150
+||preprod.bloxd.io/static/js/*.150.*.chunk.js$script
+! staging.bloxd.io — nitro-video-skip-overlay — logical chunk 150
+||staging.bloxd.io/static/js/*.150.*.chunk.js$script
