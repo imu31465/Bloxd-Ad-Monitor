@@ -37,6 +37,24 @@ class DetectorTests(unittest.TestCase):
         self.assertEqual(len(matches), 1)
         self.assertFalse(matches[0]["publish_filter"])
 
+    def test_coolmathgames_adapter_is_tracked_only(self) -> None:
+        source = "CoolMathGamesSdkAdaptor cmg-ads.js adBreakStart adStartSoPause"
+        matches = detector_matches(source, self.detectors)
+        self.assertIn("coolmathgames-video-adapter", [item["id"] for item in matches])
+        self.assertFalse(next(item for item in matches if item["id"] == "coolmathgames-video-adapter")["publish_filter"])
+
+    def test_admob_adapter_is_tracked_only(self) -> None:
+        source = "AdMobSdkAdaptor ads.showRewarded ads.showInterstitial renderBanner"
+        matches = detector_matches(source, self.detectors)
+        self.assertIn("admob-mobile-adapter", [item["id"] for item in matches])
+        self.assertFalse(next(item for item in matches if item["id"] == "admob-mobile-adapter")["publish_filter"])
+
+    def test_adinplay_adapter_is_tracked_only(self) -> None:
+        source = "AdinPlaySdkAdaptor api.adinplay.com startPreRoll adplayer renderBanner aipDisplayTag"
+        matches = detector_matches(source, self.detectors)
+        self.assertIn("adinplay-video-adapter", [item["id"] for item in matches])
+        self.assertFalse(next(item for item in matches if item["id"] == "adinplay-video-adapter")["publish_filter"])
+
 
 class FilterTests(unittest.TestCase):
     def test_filter_is_generated_for_isolated_chunk(self) -> None:
