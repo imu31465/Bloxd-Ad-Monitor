@@ -436,6 +436,25 @@ def run_scan(
         }
         for host, env in sorted(environments.items())
     }
+
+    # A poll can run repeatedly against the same build. Keep the last
+    # meaningful detector movement/new/disappearance report visible until a
+    # different build arrives; otherwise the next no-op poll erases the event.
+    previous_builds = {
+        host: entry.get("build")
+        for host, entry in (previous.get("environments", {}) if isinstance(previous, dict) else {}).items()
+        if isinstance(entry, dict)
+    }
+    current_builds = {host: env["build"] for host, env in environments.items()}
+    same_build_snapshot = current_builds == previous_builds
+    if same_build_snapshot and not any(changes.values()):
+        previous_changes = previous.get("changes", {}) if isinstance(previous, dict) else {}
+        if isinstance(previous_changes, dict) and any(
+            isinstance(previous_changes.get(key), list) and previous_changes[key]
+            for key in ("new", "disappeared", "moved", "changed")
+        ):
+            changes = previous_changes
+
     report = {
         "schema_version": 1,
         "generated_at": generated_at,
