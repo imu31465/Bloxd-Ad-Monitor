@@ -1,13 +1,13 @@
 # Latest ad scan
 
-- Generated: `2026-11-22T15:39:02Z`
+- Generated: `2026-11-22T15:39:18Z`
 - Source manifest: [https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json](https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json)
 - Environments: **3**
 - JavaScript assets considered: **1170**
 - Unique content hashes scanned or reused: **778**
 - High-confidence detections: **21**
-- Published filter rules (total): **3**
-- Fixed filters: **0**
+- Published filter rules (total): **17**
+- Fixed filters: **14**
 - Dynamic chunk filters: **3**
 
 > Filter rules are emitted only for explicitly approved detector signatures in isolated lazy-loaded chunks. `main.js` is never blocked automatically. When a signature disappears, its rule is removed rather than retaining a potentially stale chunk ID.

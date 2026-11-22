@@ -177,7 +177,7 @@
       "source_path": "bundles/staging.bloxd.io/chunks/js/152.js"
     }
   ],
-  "generated_at": "2026-11-22T15:39:02Z",
+  "generated_at": "2026-11-22T15:39:18Z",
   "occurrences": [
     {
       "build": "3lwmg.ecbaa066",
@@ -823,10 +823,10 @@
     "chunk_filter_rules": 3,
     "detections": 21,
     "environments": 3,
-    "filter_rules": 3,
+    "filter_rules": 17,
     "javascript_assets": 1170,
     "new_hashes_scanned": 0,
-    "static_filter_rules": 0,
+    "static_filter_rules": 14,
     "unique_hashes": 778
   }
 }

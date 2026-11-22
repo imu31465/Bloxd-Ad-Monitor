@@ -2,14 +2,27 @@
 ! Description: Fixed Bloxd ad filters plus automatically tracked video-ad adapter chunks.
 ! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
 ! Expires: 12 hours
-! Last generated: 2026-11-22T15:39:02Z
+! Last generated: 2026-11-22T15:39:18Z
 ! Source manifest: https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
 ! Static provider, cosmetic, and supported scriptlet rules are maintained in config/static-filters.txt.
 ! Dynamic chunk rules are emitted only for high-confidence isolated lazy-loaded adapters.
 ! The main bundle is never blocked automatically.
 
 ! Fixed Bloxd rules
-! No fixed Bloxd rules configured.
+||page-kit.io^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||venatusmedia.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||vntsm.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||adinplay.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||aditude.io^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||nitropay.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||securepubads.g.doubleclick.net^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||googlesyndication.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||doubleclick.net^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||gamedistribution.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||assets.msn.com/staticsb/statics/latest/msstart-games-sdk/$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+bloxd.io,preprod.bloxd.io,staging.bloxd.io##.BloxdAdContainer, .HomePageAdContainer, .AdBannerLoader
+bloxd.io,preprod.bloxd.io,staging.bloxd.io###GenericVideoWrapper
+bloxd.io,preprod.bloxd.io,staging.bloxd.io##+js(aopr, nitroAds)
 
 ! Automatically tracked ad-adapter chunks
 ! bloxd.io — nitro-video-skip-overlay — logical chunk 152
