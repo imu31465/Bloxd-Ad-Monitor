@@ -292,20 +292,43 @@ def compare_occurrences(previous: list[dict[str, Any]], current: list[dict[str, 
     return changes
 
 
-def render_filter_list(rules: list[dict[str, str]], generated_at: str, source_url_value: str) -> str:
+def load_static_filters(path: Path) -> list[str]:
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except OSError as exc:
+        raise MonitorError(f"Cannot read static filter file {path}: {exc}") from exc
+    rules = [line.strip() for line in lines if line.strip() and not line.lstrip().startswith("!")]
+    for rule in rules:
+        if not rule.startswith(("||", "bloxd.io,", "preprod.bloxd.io,", "staging.bloxd.io,")):
+            raise MonitorError(f"Unsupported static filter line in {path}: {rule}")
+    return rules
+
+
+def render_filter_list(
+    rules: list[dict[str, str]],
+    generated_at: str,
+    source_url_value: str,
+    static_filters: list[str] | None = None,
+) -> str:
+    static_filters = static_filters or []
     lines = [
-        "! Title: Bloxd Ad Monitor — video adapter filters",
-        "! Description: Automatically detected high-confidence Bloxd video-ad overlay modules.",
+        "! Title: Bloxd Ad Monitor — combined Bloxd filters",
+        "! Description: Fixed Bloxd ad filters plus automatically tracked video-ad adapter chunks.",
         "! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor",
         "! Expires: 12 hours",
         f"! Last generated: {generated_at}",
         f"! Source manifest: {source_url_value}",
-        "! Only isolated, strongly identified lazy-loaded JavaScript chunks are listed.",
+        "! Static provider, cosmetic, and supported scriptlet rules are maintained in config/static-filters.txt.",
+        "! Dynamic chunk rules are emitted only for high-confidence isolated lazy-loaded adapters.",
         "! The main bundle is never blocked automatically.",
         "",
+        "! Fixed Bloxd rules",
     ]
+    lines.extend(static_filters or ["! No fixed Bloxd rules configured."])
+    lines.append("")
+    lines.append("! Automatically tracked ad-adapter chunks")
     if not rules:
-        lines.append("! No currently verified chunk filters. This is intentionally fail-open.")
+        lines.append("! No currently verified chunk filters. This section is intentionally fail-open.")
     else:
         for item in rules:
             lines.append(f"! {item['environment']} — {item['detector_id']} — logical chunk {item['chunk_id']}")
@@ -324,7 +347,9 @@ def render_markdown(report: dict[str, Any]) -> str:
         f"- JavaScript assets considered: **{counts['javascript_assets']}**",
         f"- Unique content hashes scanned or reused: **{counts['unique_hashes']}**",
         f"- High-confidence detections: **{counts['detections']}**",
-        f"- Published filter rules: **{counts['filter_rules']}**",
+        f"- Published filter rules (total): **{counts['filter_rules']}**",
+        f"- Fixed filters: **{counts.get('static_filter_rules', 0)}**",
+        f"- Dynamic chunk filters: **{counts.get('chunk_filter_rules', counts['filter_rules'])}**",
         "",
         "> Filter rules are emitted only for explicitly approved detector signatures in isolated lazy-loaded chunks. `main.js` is never blocked automatically. When a signature disappears, its rule is removed rather than retaining a potentially stale chunk ID.",
         "",
@@ -370,6 +395,7 @@ def run_scan(
     source_root: Path | None = None,
     timeout: int = 30,
     workers: int = 8,
+    static_filter_count: int = 0,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     environments = validate_manifest(manifest)
     cache = state.get("content_cache", {}) if isinstance(state, dict) else {}
@@ -467,7 +493,9 @@ def run_scan(
             "new_hashes_scanned": len(downloaded),
             "cached_hashes_reused": len(entries_by_sha) - len(downloaded),
             "detections": len(occurrences),
-            "filter_rules": len(filter_rules),
+            "filter_rules": len(filter_rules) + static_filter_count,
+            "chunk_filter_rules": len(filter_rules),
+            "static_filter_rules": static_filter_count,
         },
         "occurrences": occurrences,
         "filter_rules": filter_rules,
