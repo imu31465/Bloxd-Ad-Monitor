@@ -7,6 +7,7 @@ on:
       - ".bootstrap.tar.gz.b64"
       - "bloxd_ad_monitor/**"
       - "config/**"
+      - "tests/**"
       - ".github/workflows/bootstrap.yml"
   schedule:
     - cron: "13,43 * * * *"
@@ -25,6 +26,10 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Sync with current main
+        run: git pull --rebase origin main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -47,7 +52,8 @@ jobs:
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "feat: implement independent Bloxd ad monitoring"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
       - name: Scan latest Build Monitor bundles
         run: >-
@@ -64,5 +70,6 @@ jobs:
             echo "No report or filter changes."
           else
             git commit -m "chore: update Bloxd ad scan"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
