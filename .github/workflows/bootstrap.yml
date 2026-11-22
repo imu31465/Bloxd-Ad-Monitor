@@ -1,0 +1,37 @@
+name: Bootstrap source tree
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".bootstrap.tar.gz.b64"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore complete project tree
+        run: |
+          base64 --decode .bootstrap.tar.gz.b64 | tar -xz --no-same-owner
+          rm -f .bootstrap.tar.gz.b64
+          rm -f .github/workflows/bootstrap.yml
+      - name: Validate project
+        run: |
+          python -m compileall -q bloxd_ad_monitor tests
+          python -m unittest discover -s tests -v
+      - name: Commit initial implementation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: implement independent Bloxd ad monitoring"
+          git push
