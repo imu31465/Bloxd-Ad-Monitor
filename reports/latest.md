@@ -1,6 +1,6 @@
 # Latest ad scan
 
-- Generated: `2026-11-22T15:39:27Z`
+- Generated: `2026-11-22T20:28:06Z`
 - Source manifest: [https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json](https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json)
 - Environments: **3**
 - JavaScript assets considered: **1170**
