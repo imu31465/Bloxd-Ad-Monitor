@@ -1,6 +1,6 @@
 # Latest ad scan
 
-- Generated: `2026-11-22T13:31:26Z`
+- Generated: `2026-11-22T13:35:25Z`
 - Source manifest: [https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json](https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json)
 - Environments: **3**
 - JavaScript assets considered: **1158**
@@ -29,13 +29,7 @@
 
 ## Changes from previous scan
 
-### New
-- `{"chunk_id": "149", "detector_id": "aditude-instream-adapter", "environment": "bloxd.io", "path": "bundles/bloxd.io/chunks/js/149.js"}`
-- `{"chunk_id": "150", "detector_id": "nitro-video-skip-overlay", "environment": "bloxd.io", "path": "bundles/bloxd.io/chunks/js/150.js"}`
-- `{"chunk_id": "149", "detector_id": "aditude-instream-adapter", "environment": "preprod.bloxd.io", "path": "bundles/preprod.bloxd.io/chunks/js/149.js"}`
-- `{"chunk_id": "150", "detector_id": "nitro-video-skip-overlay", "environment": "preprod.bloxd.io", "path": "bundles/preprod.bloxd.io/chunks/js/150.js"}`
-- `{"chunk_id": "149", "detector_id": "aditude-instream-adapter", "environment": "staging.bloxd.io", "path": "bundles/staging.bloxd.io/chunks/js/149.js"}`
-- `{"chunk_id": "150", "detector_id": "nitro-video-skip-overlay", "environment": "staging.bloxd.io", "path": "bundles/staging.bloxd.io/chunks/js/150.js"}`
+No detector-location or implementation changes detected.
 
 ## Interpretation
 

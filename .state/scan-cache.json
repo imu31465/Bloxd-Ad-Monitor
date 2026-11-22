@@ -3179,44 +3179,7 @@
       "changed": [],
       "disappeared": [],
       "moved": [],
-      "new": [
-        {
-          "chunk_id": "149",
-          "detector_id": "aditude-instream-adapter",
-          "environment": "bloxd.io",
-          "path": "bundles/bloxd.io/chunks/js/149.js"
-        },
-        {
-          "chunk_id": "150",
-          "detector_id": "nitro-video-skip-overlay",
-          "environment": "bloxd.io",
-          "path": "bundles/bloxd.io/chunks/js/150.js"
-        },
-        {
-          "chunk_id": "149",
-          "detector_id": "aditude-instream-adapter",
-          "environment": "preprod.bloxd.io",
-          "path": "bundles/preprod.bloxd.io/chunks/js/149.js"
-        },
-        {
-          "chunk_id": "150",
-          "detector_id": "nitro-video-skip-overlay",
-          "environment": "preprod.bloxd.io",
-          "path": "bundles/preprod.bloxd.io/chunks/js/150.js"
-        },
-        {
-          "chunk_id": "149",
-          "detector_id": "aditude-instream-adapter",
-          "environment": "staging.bloxd.io",
-          "path": "bundles/staging.bloxd.io/chunks/js/149.js"
-        },
-        {
-          "chunk_id": "150",
-          "detector_id": "nitro-video-skip-overlay",
-          "environment": "staging.bloxd.io",
-          "path": "bundles/staging.bloxd.io/chunks/js/150.js"
-        }
-      ]
+      "new": []
     },
     "environments": {
       "bloxd.io": {
@@ -3258,7 +3221,7 @@
         "source_path": "bundles/staging.bloxd.io/chunks/js/150.js"
       }
     ],
-    "generated_at": "2026-11-22T13:31:26Z",
+    "generated_at": "2026-11-22T13:35:25Z",
     "occurrences": [
       {
         "build": "bqoxjr.2558012f",
@@ -3275,7 +3238,7 @@
           "GenericVideoWrapper"
         ],
         "filter_note": "Tracked for visibility only; no automatic blocking rule is generated.",
-        "filterable": true,
+        "filterable": false,
         "identity": "chunk.js:149",
         "matched_groups": [
           "AditudeSdkAdaptor",
@@ -3335,7 +3298,7 @@
           "GenericVideoWrapper"
         ],
         "filter_note": "Tracked for visibility only; no automatic blocking rule is generated.",
-        "filterable": true,
+        "filterable": false,
         "identity": "chunk.js:149",
         "matched_groups": [
           "AditudeSdkAdaptor",
@@ -3395,7 +3358,7 @@
           "GenericVideoWrapper"
         ],
         "filter_note": "Tracked for visibility only; no automatic blocking rule is generated.",
-        "filterable": true,
+        "filterable": false,
         "identity": "chunk.js:149",
         "matched_groups": [
           "AditudeSdkAdaptor",
@@ -3447,15 +3410,15 @@
       "repository": "imu31465/Bloxd-Build-Monitor"
     },
     "summary": {
-      "cached_hashes_reused": 0,
+      "cached_hashes_reused": 772,
       "detections": 6,
       "environments": 3,
       "filter_rules": 3,
       "javascript_assets": 1158,
-      "new_hashes_scanned": 772,
+      "new_hashes_scanned": 0,
       "unique_hashes": 772
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-11-22T13:31:26Z"
+  "updated_at": "2026-11-22T13:35:25Z"
 }
