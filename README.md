@@ -12,7 +12,7 @@ Bloxdの新しいビルドを定期確認し、JavaScriptチャンクの中身�
 
 ## uBlock Origin Liteでの利用
 
-uBlock Origin Liteの最新版では外部フィルターリストを追加できます（2026年6月以降の対応版）。ダッシュボードの **Filter lists** を開き、下部の **Add filter list...** から次のURLを登録します。
+uBlock Origin Liteの外部フィルターリスト購読に対応した版（2026.621.1813以降）では、ダッシュボードの **Filter lists** を開き、下部の **Add filter list...** から次のURLを登録します。
 
 ```text
 https://raw.githubusercontent.com/imu31465/Bloxd-Ad-Monitor/main/filters/bloxd-video-adapters.txt
@@ -68,6 +68,7 @@ python -m unittest discover -s tests -v
 - 広告事業者がコードの識別子や実装を変更した場合、検出器の見直しが必要です。
 - uBlock Origin Liteのフィルター対応範囲や更新タイミングはブラウザー側に依存します。リスト更新直後に即時反映されるとは限りません。
 - フィルターは広告アダプターのチャンク通信を止めます。広告周辺の挙動が変わる可能性があるため、最新レポートとテスト結果を確認して利用してください。
+- Nitroの検出対象チャンクには15秒スキップUIだけでなく、Nitroのバナー描画処理（`renderBanner`）も含まれています。生成ルールはチャンク全体をブロックするため、カウントダウンだけでなくNitro経由のバナー等も動作しなくなる可能性があります。
 
 ## ライセンス
 
