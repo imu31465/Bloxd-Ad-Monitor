@@ -1,0 +1,10 @@
+[project]
+name = "bloxd-ad-monitor"
+version = "0.1.0"
+description = "Tracks Bloxd ad-related JavaScript modules and generates uBlock Origin-compatible filters."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

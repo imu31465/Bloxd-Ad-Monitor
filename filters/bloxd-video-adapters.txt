@@ -1,0 +1,5 @@
+! Title: Bloxd Ad Monitor — video adapter filters
+! Description: Automatically detected high-confidence Bloxd video-ad overlay modules.
+! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
+! Expires: 12 hours
+! No rules until the first complete, verified scan succeeds. This is intentionally fail-open.

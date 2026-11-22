@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "generated_at": null,
+  "source": {
+    "repository": "imu31465/Bloxd-Build-Monitor",
+    "manifest_url": "https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json"
+  },
+  "environments": {},
+  "summary": {"environments": 0, "javascript_assets": 0, "unique_hashes": 0, "new_hashes_scanned": 0, "cached_hashes_reused": 0, "detections": 0, "filter_rules": 0},
+  "occurrences": [],
+  "filter_rules": [],
+  "changes": {"new": [], "disappeared": [], "moved": [], "changed": []},
+  "status": "awaiting-first-scan"
+}

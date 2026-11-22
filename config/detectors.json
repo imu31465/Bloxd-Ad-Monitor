@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "detectors": [
+    {
+      "id": "nitro-video-skip-overlay",
+      "name": "Nitro video skip/countdown overlay",
+      "confidence": "high",
+      "description": "Identifies the isolated Nitro video-ad adapter that renders the timed skip control and pauses/resumes the game during the ad.",
+      "required_groups": [
+        ["NitroSdkAdaptor", "NitroSdkAdapter"],
+        ["NitroVideoSkip", "NitroOutstreamVideo"],
+        ["Skip ad in", "Skip Ad"],
+        ["adStartSoPause", "adCompleteSoResume"]
+      ],
+      "publish_filter": true,
+      "filter_note": "Strong signature for the isolated Nitro video interstitial adapter."
+    },
+    {
+      "id": "aditude-instream-adapter",
+      "name": "Aditude instream adapter",
+      "confidence": "high",
+      "description": "Tracks the Aditude instream-ad adapter, but does not auto-block it because the signature alone does not establish that it owns the timed skip overlay.",
+      "required_groups": [
+        ["AditudeSdkAdaptor", "AditudeSDKAdaptor"],
+        ["requestInstreamPlayer", "edge.aditude.io"],
+        ["GenericVideoWrapper"]
+      ],
+      "publish_filter": false,
+      "filter_note": "Tracked for visibility only; no automatic blocking rule is generated."
+    }
+  ]
+}
