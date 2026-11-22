@@ -3412,8 +3412,140 @@
     "changes": {
       "changed": [],
       "disappeared": [],
-      "moved": [],
-      "new": []
+      "moved": [
+        {
+          "detector_id": "aditude-instream-adapter",
+          "environment": "bloxd.io",
+          "from": [
+            "149"
+          ],
+          "to": [
+            "154"
+          ]
+        },
+        {
+          "detector_id": "nitro-video-skip-overlay",
+          "environment": "bloxd.io",
+          "from": [
+            "150"
+          ],
+          "to": [
+            "152"
+          ]
+        },
+        {
+          "detector_id": "aditude-instream-adapter",
+          "environment": "staging.bloxd.io",
+          "from": [
+            "149"
+          ],
+          "to": [
+            "154"
+          ]
+        },
+        {
+          "detector_id": "nitro-video-skip-overlay",
+          "environment": "staging.bloxd.io",
+          "from": [
+            "150"
+          ],
+          "to": [
+            "152"
+          ]
+        }
+      ],
+      "new": [
+        {
+          "chunk_id": null,
+          "detector_id": "adinplay-video-adapter",
+          "environment": "bloxd.io",
+          "path": "bundles/bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "151",
+          "detector_id": "adinplay-video-adapter",
+          "environment": "bloxd.io",
+          "path": "bundles/bloxd.io/chunks/js/151.js"
+        },
+        {
+          "chunk_id": null,
+          "detector_id": "admob-mobile-adapter",
+          "environment": "bloxd.io",
+          "path": "bundles/bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "150",
+          "detector_id": "admob-mobile-adapter",
+          "environment": "bloxd.io",
+          "path": "bundles/bloxd.io/chunks/js/150.js"
+        },
+        {
+          "chunk_id": "149",
+          "detector_id": "coolmathgames-video-adapter",
+          "environment": "bloxd.io",
+          "path": "bundles/bloxd.io/chunks/js/149.js"
+        },
+        {
+          "chunk_id": null,
+          "detector_id": "adinplay-video-adapter",
+          "environment": "preprod.bloxd.io",
+          "path": "bundles/preprod.bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "147",
+          "detector_id": "adinplay-video-adapter",
+          "environment": "preprod.bloxd.io",
+          "path": "bundles/preprod.bloxd.io/chunks/js/147.js"
+        },
+        {
+          "chunk_id": null,
+          "detector_id": "admob-mobile-adapter",
+          "environment": "preprod.bloxd.io",
+          "path": "bundles/preprod.bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "146",
+          "detector_id": "admob-mobile-adapter",
+          "environment": "preprod.bloxd.io",
+          "path": "bundles/preprod.bloxd.io/chunks/js/146.js"
+        },
+        {
+          "chunk_id": "145",
+          "detector_id": "coolmathgames-video-adapter",
+          "environment": "preprod.bloxd.io",
+          "path": "bundles/preprod.bloxd.io/chunks/js/145.js"
+        },
+        {
+          "chunk_id": null,
+          "detector_id": "adinplay-video-adapter",
+          "environment": "staging.bloxd.io",
+          "path": "bundles/staging.bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "151",
+          "detector_id": "adinplay-video-adapter",
+          "environment": "staging.bloxd.io",
+          "path": "bundles/staging.bloxd.io/chunks/js/151.js"
+        },
+        {
+          "chunk_id": null,
+          "detector_id": "admob-mobile-adapter",
+          "environment": "staging.bloxd.io",
+          "path": "bundles/staging.bloxd.io/main.js"
+        },
+        {
+          "chunk_id": "150",
+          "detector_id": "admob-mobile-adapter",
+          "environment": "staging.bloxd.io",
+          "path": "bundles/staging.bloxd.io/chunks/js/150.js"
+        },
+        {
+          "chunk_id": "149",
+          "detector_id": "coolmathgames-video-adapter",
+          "environment": "staging.bloxd.io",
+          "path": "bundles/staging.bloxd.io/chunks/js/149.js"
+        }
+      ]
     },
     "environments": {
       "bloxd.io": {
