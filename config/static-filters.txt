@@ -1,0 +1,22 @@
+! Fixed Bloxd filters migrated from the previous manual setup.
+! Provider/network rules are limited to Bloxd environments so they do not affect unrelated sites.
+||page-kit.io^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||venatusmedia.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||vntsm.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||adinplay.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||aditude.io^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||nitropay.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||securepubads.g.doubleclick.net^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||googlesyndication.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||doubleclick.net^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||gamedistribution.com^$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+||assets.msn.com/staticsb/statics/latest/msstart-games-sdk/$domain=bloxd.io|preprod.bloxd.io|staging.bloxd.io
+
+! Cosmetic rules from the previous Bloxd setup.
+bloxd.io,preprod.bloxd.io,staging.bloxd.io##.BloxdAdContainer, .HomePageAdContainer, .AdBannerLoader
+bloxd.io,preprod.bloxd.io,staging.bloxd.io###GenericVideoWrapper
+
+! Supported uBO scriptlet: suppress access to the Nitro ads object.
+bloxd.io,preprod.bloxd.io,staging.bloxd.io##+js(aopr, nitroAds)
+
+! The former no-document-write scriptlet was omitted: it is not present in the current official uBO scriptlet resource list.
