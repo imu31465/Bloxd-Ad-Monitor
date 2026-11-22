@@ -97,19 +97,21 @@ def validate_manifest(manifest: Any) -> dict[str, dict[str, Any]]:
         if not isinstance(build, str) or not build:
             raise MonitorError(f"Environment {host} is missing build id")
         clean_files: list[dict[str, Any]] = []
-        for item in files:
+        for index, item in enumerate(files):
             if not isinstance(item, dict):
-                continue
+                raise MonitorError(f"Environment {host} contains a non-object file entry at index {index}")
             path = item.get("path")
-            sha = item.get("sha256")
-            if not isinstance(path, str) or not path.endswith(".js"):
-                continue
+            if not isinstance(path, str) or not path:
+                raise MonitorError(f"Environment {host} contains a file entry without a valid path at index {index}")
             normalized = Path(path)
             if normalized.is_absolute() or ".." in normalized.parts or "\\" in path:
                 raise MonitorError(f"Unsafe bundle path in manifest: {path!r}")
             expected_prefix = f"bundles/{host}/"
             if not path.startswith(expected_prefix):
                 raise MonitorError(f"Bundle path is outside its environment directory: {path}")
+            if not path.endswith(".js"):
+                continue
+            sha = item.get("sha256")
             if not isinstance(sha, str) or not re.fullmatch(r"[a-fA-F0-9]{64}", sha):
                 raise MonitorError(f"Missing or invalid SHA-256 for {path}")
             clean_files.append(item)
@@ -232,7 +234,7 @@ def _make_occurrence(host: str, env: dict[str, Any], entry: dict[str, Any], matc
         "source_filename": entry.get("source_filename"),
         "source_url": entry.get("source_url"),
         "sha256": entry["sha256"].lower(),
-        "filterable": is_chunk,
+        "filterable": match["publish_filter"] and is_chunk,
         "publish_filter": match["publish_filter"] and is_chunk,
         "filter_note": match["filter_note"],
     }
@@ -405,6 +407,10 @@ def run_scan(
 
     for sha, matches in downloaded.items():
         cache[sha] = {"detector_fingerprint": detector_fingerprint, "matches": matches}
+
+    # Only hashes present in the current manifest are needed for the next
+    # scan. Pruning prevents the persistent cache from growing with every build.
+    cache = {sha: cache[sha] for sha in entries_by_sha}
 
     occurrences: list[dict[str, Any]] = []
     for host, env in sorted(environments.items()):
