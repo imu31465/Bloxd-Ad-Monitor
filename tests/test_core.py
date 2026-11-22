@@ -155,6 +155,48 @@ class ScanTests(unittest.TestCase):
         with self.assertRaises(MonitorError):
             run_scan(manifest, {"content_cache": {}, "latest": {}}, self.detectors, self.fingerprint)
 
+    def test_change_report_survives_repeated_poll_of_same_build(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            bundle = root / "bundles/bloxd.io/chunks/js/149.js"
+            bundle.parent.mkdir(parents=True)
+            content = b"NitroSdkAdaptor NitroVideoSkip NitroOutstreamVideo Skip ad in adStartSoPause"
+            bundle.write_bytes(content)
+            sha = hashlib.sha256(content).hexdigest()
+            manifest = {"bloxd.io": {"build": "same.12345678", "files": [{
+                "path": "bundles/bloxd.io/chunks/js/149.js",
+                "sha256": sha,
+                "identity": "chunk.js:149",
+            }]}}
+            _, state = run_scan(manifest, {"content_cache": {}, "latest": {}}, self.detectors, self.fingerprint, source_root=root)
+            event = {"new": [], "disappeared": [], "moved": [
+                {"environment": "bloxd.io", "detector_id": "nitro-video-skip-overlay", "from": ["150"], "to": ["149"]}
+            ], "changed": []}
+            state["latest"]["changes"] = event
+            report, _ = run_scan(manifest, state, self.detectors, self.fingerprint, source_root=root)
+            self.assertEqual(report["changes"], event)
+
+    def test_change_report_clears_when_build_changes(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            bundle = root / "bundles/bloxd.io/chunks/js/149.js"
+            bundle.parent.mkdir(parents=True)
+            content = b"NitroSdkAdaptor NitroVideoSkip NitroOutstreamVideo Skip ad in adStartSoPause"
+            bundle.write_bytes(content)
+            sha = hashlib.sha256(content).hexdigest()
+            first = {"bloxd.io": {"build": "old.12345678", "files": [{
+                "path": "bundles/bloxd.io/chunks/js/149.js",
+                "sha256": sha,
+                "identity": "chunk.js:149",
+            }]}}
+            _, state = run_scan(first, {"content_cache": {}, "latest": {}}, self.detectors, self.fingerprint, source_root=root)
+            state["latest"]["changes"] = {"new": [], "disappeared": [], "moved": [
+                {"environment": "bloxd.io", "detector_id": "nitro-video-skip-overlay", "from": ["150"], "to": ["149"]}
+            ], "changed": []}
+            second = {"bloxd.io": {"build": "new.87654321", "files": first["bloxd.io"]["files"]}}
+            report, _ = run_scan(second, state, self.detectors, self.fingerprint, source_root=root)
+            self.assertEqual(report["changes"], {"new": [], "disappeared": [], "moved": [], "changed": []})
+
 
 if __name__ == "__main__":
     unittest.main()
