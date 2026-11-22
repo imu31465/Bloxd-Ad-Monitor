@@ -12,13 +12,13 @@ Bloxdの新しいビルドを定期確認し、JavaScriptチャンクの中身�
 
 ## uBlock Origin Liteでの利用
 
-次のURLをカスタムフィルターリストとして登録します。
+uBlock Origin Liteの最新版では外部フィルターリストを追加できます（2026年6月以降の対応版）。ダッシュボードの **Filter lists** を開き、下部の **Add filter list...** から次のURLを登録します。
 
 ```text
 https://raw.githubusercontent.com/imu31465/Bloxd-Ad-Monitor/main/filters/bloxd-video-adapters.txt
 ```
 
-このリストは、検証済みの広告アダプターが独立した遅延ロードJSチャンクに存在するときだけ、該当チャンクのURLパターンを出力します。チャンク番号が変われば次回スキャンでルールも更新されます。
+このリストは、検証済みの広告アダプターが独立した遅延ロードJSチャンクに存在するときだけ、該当チャンクのURLパターンを出力します。チャンク番号が変われば次回スキャンでルールも更新されます。リストの取得・再取得タイミングはuBlock Origin Liteとブラウザー側の管理に依存するため、GitHub上の生成結果とブラウザーに反映済みのルールが一時的にずれる場合があります。
 
 ## 仕組み
 
