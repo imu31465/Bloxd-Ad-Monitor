@@ -23,7 +23,7 @@ https://raw.githubusercontent.com/imu31465/Bloxd-Ad-Monitor/main/filters/bloxd-v
 
 要素非表示・スクリプトレットも適用するには、ブラウザーの拡張機能詳細でuBlock Origin Liteの **Allow User Scripts** を有効にし、Bloxdでのフィルタリングモードを **Optimal** または **Complete** にしてください。Basicではネットワークブロックのみが適用されます。外部リストから読み込めるスクリプトレットはuBO Liteに同梱されたものに限られます。
 
-以前の `no-document-write` ルールは、現行の公式uBOスクリプトレット一覧に存在を確認できなかったため、統合リストには含めていません。リストの取得・再取得タイミングはuBlock Origin Liteとブラウザー側の管理に依存するため、GitHub上の生成結果とブラウザーに反映済みのルールが一時的にずれる場合があります。
+以前の `no-document-write` ルールは、現行の公式uBOスクリプトレット一覧に存在を確認できなかったため、統合リストには含めていません。 購読リストの `Expires` は1時間に設定しており、uBlock Origin Lite側はこの期限を基準に再取得します。ただし、ブラウザー側の更新処理があるため、生成後すぐの反映を保証するものではありません。リストの取得・再取得タイミングはuBlock Origin Liteとブラウザー側の管理に依存するため、GitHub上の生成結果とブラウザーに反映済みのルールが一時的にずれる場合があります。
 
 ## 仕組み
 

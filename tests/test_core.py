@@ -72,6 +72,7 @@ class FilterTests(unittest.TestCase):
         self.assertIn("bloxd.io,preprod.bloxd.io,staging.bloxd.io##.BloxdAdContainer", output)
         self.assertIn("bloxd.io,preprod.bloxd.io,staging.bloxd.io##+js(aopr, nitroAds)", output)
         self.assertIn("||bloxd.io/static/js/*.152.*.chunk.js$script", output)
+        self.assertIn("! Expires: 1 hour", output)
         self.assertNotIn("*.149.*.chunk.js", output)
 
     def test_filter_is_generated_for_isolated_chunk(self) -> None:

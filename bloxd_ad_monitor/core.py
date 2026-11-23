@@ -315,7 +315,7 @@ def render_filter_list(
         "! Title: Bloxd Ad Monitor — combined Bloxd filters",
         "! Description: Fixed Bloxd ad filters plus automatically tracked video-ad adapter chunks.",
         "! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor",
-        "! Expires: 12 hours",
+        "! Expires: 1 hour",
         f"! Last generated: {generated_at}",
         f"! Source manifest: {source_url_value}",
         "! Static provider, cosmetic, and supported scriptlet rules are maintained in config/static-filters.txt.",
