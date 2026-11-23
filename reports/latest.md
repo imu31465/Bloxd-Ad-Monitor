@@ -1,10 +1,10 @@
 # Latest ad scan
 
-- Generated: `2026-11-23T21:15:55Z`
+- Generated: `2026-11-23T22:25:16Z`
 - Source manifest: [https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json](https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json)
 - Environments: **3**
 - JavaScript assets considered: **1179**
-- Unique content hashes scanned or reused: **393**
+- Unique content hashes scanned or reused: **786**
 - High-confidence detections: **21**
 - Published filter rules (total): **17**
 - Fixed filters: **14**
@@ -46,29 +46,21 @@
 
 ## Changes from previous scan
 
-### Moved
-- `{"detector_id": "adinplay-video-adapter", "environment": "bloxd.io", "from": ["151", "bundles/bloxd.io/main.js"], "to": ["152", "bundles/bloxd.io/main.js"]}`
-- `{"detector_id": "aditude-instream-adapter", "environment": "bloxd.io", "from": ["154"], "to": ["155"]}`
-- `{"detector_id": "admob-mobile-adapter", "environment": "bloxd.io", "from": ["150", "bundles/bloxd.io/main.js"], "to": ["151", "bundles/bloxd.io/main.js"]}`
-- `{"detector_id": "coolmathgames-video-adapter", "environment": "bloxd.io", "from": ["149"], "to": ["150"]}`
-- `{"detector_id": "nitro-video-skip-overlay", "environment": "bloxd.io", "from": ["152"], "to": ["153"]}`
-- `{"detector_id": "adinplay-video-adapter", "environment": "preprod.bloxd.io", "from": ["147", "bundles/preprod.bloxd.io/main.js"], "to": ["152", "bundles/preprod.bloxd.io/main.js"]}`
-- `{"detector_id": "aditude-instream-adapter", "environment": "preprod.bloxd.io", "from": ["149"], "to": ["155"]}`
-- `{"detector_id": "admob-mobile-adapter", "environment": "preprod.bloxd.io", "from": ["146", "bundles/preprod.bloxd.io/main.js"], "to": ["151", "bundles/preprod.bloxd.io/main.js"]}`
-- `{"detector_id": "coolmathgames-video-adapter", "environment": "preprod.bloxd.io", "from": ["145"], "to": ["150"]}`
-- `{"detector_id": "nitro-video-skip-overlay", "environment": "preprod.bloxd.io", "from": ["150"], "to": ["153"]}`
-- `{"detector_id": "adinplay-video-adapter", "environment": "staging.bloxd.io", "from": ["151", "bundles/staging.bloxd.io/main.js"], "to": ["152", "bundles/staging.bloxd.io/main.js"]}`
-- `{"detector_id": "aditude-instream-adapter", "environment": "staging.bloxd.io", "from": ["154"], "to": ["155"]}`
-- `{"detector_id": "admob-mobile-adapter", "environment": "staging.bloxd.io", "from": ["150", "bundles/staging.bloxd.io/main.js"], "to": ["151", "bundles/staging.bloxd.io/main.js"]}`
-- `{"detector_id": "coolmathgames-video-adapter", "environment": "staging.bloxd.io", "from": ["149"], "to": ["150"]}`
-- `{"detector_id": "nitro-video-skip-overlay", "environment": "staging.bloxd.io", "from": ["152"], "to": ["153"]}`
 ### Changed
-- `{"chunk_id": null, "detector_id": "adinplay-video-adapter", "environment": "bloxd.io", "from_sha256": "e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd", "path": "bundles/bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
-- `{"chunk_id": null, "detector_id": "admob-mobile-adapter", "environment": "bloxd.io", "from_sha256": "e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd", "path": "bundles/bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
-- `{"chunk_id": null, "detector_id": "adinplay-video-adapter", "environment": "preprod.bloxd.io", "from_sha256": "2bcea8aa5ef1004dc1ba864857b4160ef0c66841673a7c10f7e58402158abdaa", "path": "bundles/preprod.bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
-- `{"chunk_id": null, "detector_id": "admob-mobile-adapter", "environment": "preprod.bloxd.io", "from_sha256": "2bcea8aa5ef1004dc1ba864857b4160ef0c66841673a7c10f7e58402158abdaa", "path": "bundles/preprod.bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
-- `{"chunk_id": null, "detector_id": "adinplay-video-adapter", "environment": "staging.bloxd.io", "from_sha256": "e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd", "path": "bundles/staging.bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
-- `{"chunk_id": null, "detector_id": "admob-mobile-adapter", "environment": "staging.bloxd.io", "from_sha256": "e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd", "path": "bundles/staging.bloxd.io/main.js", "to_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37"}`
+- `{"chunk_id": "152", "detector_id": "adinplay-video-adapter", "environment": "bloxd.io", "from_sha256": "1b2c86163645f875f0fe86b77c8baa0f44b73b1e63cc763ea32af2050c6cdc90", "path": "bundles/bloxd.io/chunks/js/152.js", "to_sha256": "54bd1424406ad2cc053402290da626b489ccedec76c9cd2cb25161a149e190a4"}`
+- `{"chunk_id": null, "detector_id": "adinplay-video-adapter", "environment": "bloxd.io", "from_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37", "path": "bundles/bloxd.io/main.js", "to_sha256": "d2eadecd08d5badfa95a4f12e06c2bb2b7bd4f71a2e6133ae839d489926757d7"}`
+- `{"chunk_id": "155", "detector_id": "aditude-instream-adapter", "environment": "bloxd.io", "from_sha256": "bf526cfbda36d5d5ae3f996e128b882658c85073fd65c42eefbcb61fedddfaaa", "path": "bundles/bloxd.io/chunks/js/155.js", "to_sha256": "fb928f5db05d84cb7728200bf67214cb3300f8a1081d0213e06ac91a599e30f0"}`
+- `{"chunk_id": "151", "detector_id": "admob-mobile-adapter", "environment": "bloxd.io", "from_sha256": "333b82b1ebd9e1943b6968833fea194c66cafe164b7e633e43fdaa2d4cf420d0", "path": "bundles/bloxd.io/chunks/js/151.js", "to_sha256": "48646163abbeae3bd214277d32b380aa418449dce83216986ead0aacb8adb942"}`
+- `{"chunk_id": null, "detector_id": "admob-mobile-adapter", "environment": "bloxd.io", "from_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37", "path": "bundles/bloxd.io/main.js", "to_sha256": "d2eadecd08d5badfa95a4f12e06c2bb2b7bd4f71a2e6133ae839d489926757d7"}`
+- `{"chunk_id": "150", "detector_id": "coolmathgames-video-adapter", "environment": "bloxd.io", "from_sha256": "c5823dce1d9d583e74af165592ca8b57d861828f0e15be34d3d7bf48986c1828", "path": "bundles/bloxd.io/chunks/js/150.js", "to_sha256": "9e094a7c1d64342c66ef050e7fcdc730b867193fe21ac923d780a3eb66d79e64"}`
+- `{"chunk_id": "153", "detector_id": "nitro-video-skip-overlay", "environment": "bloxd.io", "from_sha256": "a3719e81c79ae4eea64f3f4ecbbc4e4c16f0abebe758a65fecce7fa39cdcb12d", "path": "bundles/bloxd.io/chunks/js/153.js", "to_sha256": "95aabfa0b58656bcb990b3f25d4d04d04b79f0c54e1c315e449f5958521e3b80"}`
+- `{"chunk_id": "152", "detector_id": "adinplay-video-adapter", "environment": "staging.bloxd.io", "from_sha256": "1b2c86163645f875f0fe86b77c8baa0f44b73b1e63cc763ea32af2050c6cdc90", "path": "bundles/staging.bloxd.io/chunks/js/152.js", "to_sha256": "54bd1424406ad2cc053402290da626b489ccedec76c9cd2cb25161a149e190a4"}`
+- `{"chunk_id": null, "detector_id": "adinplay-video-adapter", "environment": "staging.bloxd.io", "from_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37", "path": "bundles/staging.bloxd.io/main.js", "to_sha256": "d2eadecd08d5badfa95a4f12e06c2bb2b7bd4f71a2e6133ae839d489926757d7"}`
+- `{"chunk_id": "155", "detector_id": "aditude-instream-adapter", "environment": "staging.bloxd.io", "from_sha256": "bf526cfbda36d5d5ae3f996e128b882658c85073fd65c42eefbcb61fedddfaaa", "path": "bundles/staging.bloxd.io/chunks/js/155.js", "to_sha256": "fb928f5db05d84cb7728200bf67214cb3300f8a1081d0213e06ac91a599e30f0"}`
+- `{"chunk_id": "151", "detector_id": "admob-mobile-adapter", "environment": "staging.bloxd.io", "from_sha256": "333b82b1ebd9e1943b6968833fea194c66cafe164b7e633e43fdaa2d4cf420d0", "path": "bundles/staging.bloxd.io/chunks/js/151.js", "to_sha256": "48646163abbeae3bd214277d32b380aa418449dce83216986ead0aacb8adb942"}`
+- `{"chunk_id": null, "detector_id": "admob-mobile-adapter", "environment": "staging.bloxd.io", "from_sha256": "ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37", "path": "bundles/staging.bloxd.io/main.js", "to_sha256": "d2eadecd08d5badfa95a4f12e06c2bb2b7bd4f71a2e6133ae839d489926757d7"}`
+- `{"chunk_id": "150", "detector_id": "coolmathgames-video-adapter", "environment": "staging.bloxd.io", "from_sha256": "c5823dce1d9d583e74af165592ca8b57d861828f0e15be34d3d7bf48986c1828", "path": "bundles/staging.bloxd.io/chunks/js/150.js", "to_sha256": "9e094a7c1d64342c66ef050e7fcdc730b867193fe21ac923d780a3eb66d79e64"}`
+- `{"chunk_id": "153", "detector_id": "nitro-video-skip-overlay", "environment": "staging.bloxd.io", "from_sha256": "a3719e81c79ae4eea64f3f4ecbbc4e4c16f0abebe758a65fecce7fa39cdcb12d", "path": "bundles/staging.bloxd.io/chunks/js/153.js", "to_sha256": "95aabfa0b58656bcb990b3f25d4d04d04b79f0c54e1c315e449f5958521e3b80"}`
 
 ## Interpretation
 
