@@ -9,8 +9,9 @@ on:
       - "config/**"
       - "tests/**"
       - ".github/workflows/bootstrap.yml"
+  # Poll every five minutes; offset from the hour to reduce schedule contention.
   schedule:
-    - cron: "13,43 * * * *"
+    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
   workflow_dispatch:
 
 permissions:
