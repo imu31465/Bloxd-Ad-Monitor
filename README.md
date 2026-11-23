@@ -27,7 +27,7 @@ https://raw.githubusercontent.com/imu31465/Bloxd-Ad-Monitor/main/filters/bloxd-v
 
 ## 仕組み
 
-1. GitHub Actionsが30分ごとにBuild Monitorの`.monitor-state.json`を読み取ります。手動実行も可能です。
+1. GitHub Actionsが5分ごとにBuild Monitorの`.monitor-state.json`を読み取ります。手動実行も可能です。
 2. マニフェストに列挙されたJSファイルだけを確認します。CSSやWASMは取得しません。
 3. 各ファイルのSHA-256を照合してから、設定済みの広告シグネチャを検査します。
 4. 同じSHA-256のファイルは`.state/scan-cache.json`の検出結果を再利用し、再ダウンロードしません。
