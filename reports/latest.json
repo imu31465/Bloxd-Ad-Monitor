@@ -158,7 +158,7 @@
       "source_path": "bundles/staging.bloxd.io/chunks/js/153.js"
     }
   ],
-  "generated_at": "2026-11-23T22:25:16Z",
+  "generated_at": "2026-11-23T22:27:04Z",
   "occurrences": [
     {
       "build": "31kiid.1299b0d6",
@@ -800,13 +800,13 @@
     "repository": "imu31465/Bloxd-Build-Monitor"
   },
   "summary": {
-    "cached_hashes_reused": 393,
+    "cached_hashes_reused": 786,
     "chunk_filter_rules": 3,
     "detections": 21,
     "environments": 3,
     "filter_rules": 17,
     "javascript_assets": 1179,
-    "new_hashes_scanned": 393,
+    "new_hashes_scanned": 0,
     "static_filter_rules": 14,
     "unique_hashes": 786
   }
