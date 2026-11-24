@@ -2,7 +2,7 @@
 ! Description: Fixed Bloxd ad filters plus automatically tracked video-ad adapter chunks.
 ! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
 ! Expires: 1 hour
-! Last generated: 2026-11-24T06:14:36Z
+! Last generated: 2026-11-24T17:50:39Z
 ! Source manifest: https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
 ! Static provider, cosmetic, and supported scriptlet rules are maintained in config/static-filters.txt.
 ! Dynamic chunk rules are emitted only for high-confidence isolated lazy-loaded adapters.
@@ -25,9 +25,9 @@ bloxd.io,preprod.bloxd.io,staging.bloxd.io###GenericVideoWrapper
 bloxd.io,preprod.bloxd.io,staging.bloxd.io##+js(aopr, nitroAds)
 
 ! Automatically tracked ad-adapter chunks
-! bloxd.io — nitro-video-skip-overlay — logical chunk 153
-||bloxd.io/static/js/*.153.*.chunk.js$script
-! preprod.bloxd.io — nitro-video-skip-overlay — logical chunk 153
-||preprod.bloxd.io/static/js/*.153.*.chunk.js$script
-! staging.bloxd.io — nitro-video-skip-overlay — logical chunk 153
-||staging.bloxd.io/static/js/*.153.*.chunk.js$script
+! bloxd.io — nitro-video-skip-overlay — logical chunk 155
+||bloxd.io/static/js/*.155.*.chunk.js$script
+! preprod.bloxd.io — nitro-video-skip-overlay — logical chunk 155
+||preprod.bloxd.io/static/js/*.155.*.chunk.js$script
+! staging.bloxd.io — nitro-video-skip-overlay — logical chunk 155
+||staging.bloxd.io/static/js/*.155.*.chunk.js$script
