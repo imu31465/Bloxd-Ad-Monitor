@@ -3212,7 +3212,7 @@
         "source_path": "bundles/staging.bloxd.io/chunks/js/166.js"
       }
     ],
-    "generated_at": "2026-11-25T20:04:18Z",
+    "generated_at": "2026-11-26T02:45:43Z",
     "occurrences": [
       {
         "build": "fo1voe.f743fbcf",
@@ -3854,17 +3854,17 @@
       "repository": "imu31465/Bloxd-Build-Monitor"
     },
     "summary": {
-      "cached_hashes_reused": 0,
+      "cached_hashes_reused": 701,
       "chunk_filter_rules": 3,
       "detections": 21,
       "environments": 3,
       "filter_rules": 17,
       "javascript_assets": 2103,
-      "new_hashes_scanned": 701,
+      "new_hashes_scanned": 0,
       "static_filter_rules": 14,
       "unique_hashes": 701
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-11-25T20:04:18Z"
+  "updated_at": "2026-11-26T02:45:43Z"
 }
