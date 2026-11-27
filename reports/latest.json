@@ -2,230 +2,129 @@
   "changes": {
     "changed": [
       {
+        "chunk_id": "166",
+        "detector_id": "adinplay-video-adapter",
+        "environment": "bloxd.io",
+        "from_sha256": "c953c4afe44f056073f3d2e58b449fa8cfb8322301266ba919dc19281769c19d",
+        "path": "bundles/bloxd.io/chunks/js/166.js",
+        "to_sha256": "9c6e513dd5698cd55acfb05ea9bc05ac82c4abf1171e306a77f25263951fc55c"
+      },
+      {
         "chunk_id": null,
         "detector_id": "adinplay-video-adapter",
         "environment": "bloxd.io",
-        "from_sha256": "ced38618233b4c0e18d8a9fca49ec2a40abbd81c126be8b9087777b7e8963d69",
+        "from_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
         "path": "bundles/bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
+        "to_sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580"
       },
       {
         "chunk_id": "168",
         "detector_id": "aditude-instream-adapter",
         "environment": "bloxd.io",
-        "from_sha256": "c2354cf2e8afe6e239040291ce66c2b04a707a2505cb98c3c76a405957b023bb",
+        "from_sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab",
         "path": "bundles/bloxd.io/chunks/js/168.js",
-        "to_sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab"
+        "to_sha256": "72ba201421081669ddbaf43d2e15f5b67a828729887db2b19ef26f8af7b3d237"
+      },
+      {
+        "chunk_id": "165",
+        "detector_id": "admob-mobile-adapter",
+        "environment": "bloxd.io",
+        "from_sha256": "4b953346702e97f649c6a4f74dbb73afe45ad91ae035b380deaaa28adf57e36d",
+        "path": "bundles/bloxd.io/chunks/js/165.js",
+        "to_sha256": "05535f87b1a72d6379d4bda664c543445f58a223e8b716a6b1bf730225605cd3"
       },
       {
         "chunk_id": null,
         "detector_id": "admob-mobile-adapter",
         "environment": "bloxd.io",
-        "from_sha256": "ced38618233b4c0e18d8a9fca49ec2a40abbd81c126be8b9087777b7e8963d69",
+        "from_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
         "path": "bundles/bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
+        "to_sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580"
       },
       {
-        "chunk_id": null,
+        "chunk_id": "164",
+        "detector_id": "coolmathgames-video-adapter",
+        "environment": "bloxd.io",
+        "from_sha256": "0db8195ccade0df6f04bc36c4000ddafa57fac9b014634836076ca24cb6b89ba",
+        "path": "bundles/bloxd.io/chunks/js/164.js",
+        "to_sha256": "cf8c032a8c8e86482f66e154c04a82ac7144ba4f30a43b06525741ef4e2fcf25"
+      },
+      {
+        "chunk_id": "166",
         "detector_id": "adinplay-video-adapter",
-        "environment": "preprod.bloxd.io",
-        "from_sha256": "c0a17c528d423c4717284de9fd99a0e60770b7dfdff10ff53725461a4acb4f92",
-        "path": "bundles/preprod.bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
-      },
-      {
-        "chunk_id": "168",
-        "detector_id": "aditude-instream-adapter",
-        "environment": "preprod.bloxd.io",
-        "from_sha256": "94d378571e3273b535414136283541bc7de3d9948ac2089598bc6ea3a7d28182",
-        "path": "bundles/preprod.bloxd.io/chunks/js/168.js",
-        "to_sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab"
-      },
-      {
-        "chunk_id": null,
-        "detector_id": "admob-mobile-adapter",
-        "environment": "preprod.bloxd.io",
-        "from_sha256": "c0a17c528d423c4717284de9fd99a0e60770b7dfdff10ff53725461a4acb4f92",
-        "path": "bundles/preprod.bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
+        "environment": "staging.bloxd.io",
+        "from_sha256": "c953c4afe44f056073f3d2e58b449fa8cfb8322301266ba919dc19281769c19d",
+        "path": "bundles/staging.bloxd.io/chunks/js/166.js",
+        "to_sha256": "9c6e513dd5698cd55acfb05ea9bc05ac82c4abf1171e306a77f25263951fc55c"
       },
       {
         "chunk_id": null,
         "detector_id": "adinplay-video-adapter",
         "environment": "staging.bloxd.io",
-        "from_sha256": "ced38618233b4c0e18d8a9fca49ec2a40abbd81c126be8b9087777b7e8963d69",
+        "from_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
         "path": "bundles/staging.bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
+        "to_sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580"
       },
       {
         "chunk_id": "168",
         "detector_id": "aditude-instream-adapter",
         "environment": "staging.bloxd.io",
-        "from_sha256": "c2354cf2e8afe6e239040291ce66c2b04a707a2505cb98c3c76a405957b023bb",
+        "from_sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab",
         "path": "bundles/staging.bloxd.io/chunks/js/168.js",
-        "to_sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab"
+        "to_sha256": "72ba201421081669ddbaf43d2e15f5b67a828729887db2b19ef26f8af7b3d237"
+      },
+      {
+        "chunk_id": "165",
+        "detector_id": "admob-mobile-adapter",
+        "environment": "staging.bloxd.io",
+        "from_sha256": "4b953346702e97f649c6a4f74dbb73afe45ad91ae035b380deaaa28adf57e36d",
+        "path": "bundles/staging.bloxd.io/chunks/js/165.js",
+        "to_sha256": "05535f87b1a72d6379d4bda664c543445f58a223e8b716a6b1bf730225605cd3"
       },
       {
         "chunk_id": null,
         "detector_id": "admob-mobile-adapter",
         "environment": "staging.bloxd.io",
-        "from_sha256": "ced38618233b4c0e18d8a9fca49ec2a40abbd81c126be8b9087777b7e8963d69",
+        "from_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
         "path": "bundles/staging.bloxd.io/main.js",
-        "to_sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82"
-      }
-    ],
-    "disappeared": [
-      {
-        "chunk_id": "166",
-        "detector_id": "nitro-video-skip-overlay",
-        "environment": "bloxd.io",
-        "note": "Detector no longer matched; generated block rule removed.",
-        "path": "bundles/bloxd.io/chunks/js/166.js"
+        "to_sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580"
       },
       {
-        "chunk_id": "166",
-        "detector_id": "nitro-video-skip-overlay",
-        "environment": "preprod.bloxd.io",
-        "note": "Detector no longer matched; generated block rule removed.",
-        "path": "bundles/preprod.bloxd.io/chunks/js/166.js"
-      },
-      {
-        "chunk_id": "166",
-        "detector_id": "nitro-video-skip-overlay",
-        "environment": "staging.bloxd.io",
-        "note": "Detector no longer matched; generated block rule removed.",
-        "path": "bundles/staging.bloxd.io/chunks/js/166.js"
-      }
-    ],
-    "moved": [
-      {
-        "detector_id": "adinplay-video-adapter",
-        "environment": "bloxd.io",
-        "from": [
-          "165",
-          "bundles/bloxd.io/main.js"
-        ],
-        "to": [
-          "166",
-          "bundles/bloxd.io/main.js"
-        ]
-      },
-      {
-        "detector_id": "admob-mobile-adapter",
-        "environment": "bloxd.io",
-        "from": [
-          "164",
-          "bundles/bloxd.io/main.js"
-        ],
-        "to": [
-          "165",
-          "bundles/bloxd.io/main.js"
-        ]
-      },
-      {
-        "detector_id": "coolmathgames-video-adapter",
-        "environment": "bloxd.io",
-        "from": [
-          "163"
-        ],
-        "to": [
-          "164"
-        ]
-      },
-      {
-        "detector_id": "adinplay-video-adapter",
-        "environment": "preprod.bloxd.io",
-        "from": [
-          "165",
-          "bundles/preprod.bloxd.io/main.js"
-        ],
-        "to": [
-          "166",
-          "bundles/preprod.bloxd.io/main.js"
-        ]
-      },
-      {
-        "detector_id": "admob-mobile-adapter",
-        "environment": "preprod.bloxd.io",
-        "from": [
-          "164",
-          "bundles/preprod.bloxd.io/main.js"
-        ],
-        "to": [
-          "165",
-          "bundles/preprod.bloxd.io/main.js"
-        ]
-      },
-      {
-        "detector_id": "coolmathgames-video-adapter",
-        "environment": "preprod.bloxd.io",
-        "from": [
-          "163"
-        ],
-        "to": [
-          "164"
-        ]
-      },
-      {
-        "detector_id": "adinplay-video-adapter",
-        "environment": "staging.bloxd.io",
-        "from": [
-          "165",
-          "bundles/staging.bloxd.io/main.js"
-        ],
-        "to": [
-          "166",
-          "bundles/staging.bloxd.io/main.js"
-        ]
-      },
-      {
-        "detector_id": "admob-mobile-adapter",
-        "environment": "staging.bloxd.io",
-        "from": [
-          "164",
-          "bundles/staging.bloxd.io/main.js"
-        ],
-        "to": [
-          "165",
-          "bundles/staging.bloxd.io/main.js"
-        ]
-      },
-      {
+        "chunk_id": "164",
         "detector_id": "coolmathgames-video-adapter",
         "environment": "staging.bloxd.io",
-        "from": [
-          "163"
-        ],
-        "to": [
-          "164"
-        ]
+        "from_sha256": "0db8195ccade0df6f04bc36c4000ddafa57fac9b014634836076ca24cb6b89ba",
+        "path": "bundles/staging.bloxd.io/chunks/js/164.js",
+        "to_sha256": "cf8c032a8c8e86482f66e154c04a82ac7144ba4f30a43b06525741ef4e2fcf25"
       }
     ],
+    "disappeared": [],
+    "moved": [],
     "new": []
   },
   "environments": {
     "bloxd.io": {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "javascript_assets": 701
     },
     "preprod.bloxd.io": {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "javascript_assets": 701
     },
     "staging.bloxd.io": {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "javascript_assets": 701
     }
   },
   "filter_rules": [],
-  "generated_at": "2026-11-27T03:07:55Z",
+  "generated_at": "2026-11-27T12:06:18Z",
   "occurrences": [
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -248,13 +147,13 @@
       ],
       "path": "bundles/bloxd.io/main.js",
       "publish_filter": false,
-      "sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
-      "source_filename": "gw4e3a.main.937868ec.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.main.937868ec.js"
+      "sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580",
+      "source_filename": "u88b9b.main.1969c480.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.main.1969c480.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": "166",
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -280,13 +179,13 @@
       ],
       "path": "bundles/bloxd.io/chunks/js/166.js",
       "publish_filter": false,
-      "sha256": "c953c4afe44f056073f3d2e58b449fa8cfb8322301266ba919dc19281769c19d",
-      "source_filename": "gw4e3a.166.9f8f3be5.chunk.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.166.9f8f3be5.chunk.js"
+      "sha256": "9c6e513dd5698cd55acfb05ea9bc05ac82c4abf1171e306a77f25263951fc55c",
+      "source_filename": "u88b9b.166.ff5648a1.chunk.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.166.ff5648a1.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": "168",
       "confidence": "high",
       "detector_id": "aditude-instream-adapter",
@@ -308,13 +207,13 @@
       ],
       "path": "bundles/bloxd.io/chunks/js/168.js",
       "publish_filter": false,
-      "sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab",
-      "source_filename": "gw4e3a.168.a0d839cc.chunk.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.168.a0d839cc.chunk.js"
+      "sha256": "72ba201421081669ddbaf43d2e15f5b67a828729887db2b19ef26f8af7b3d237",
+      "source_filename": "u88b9b.168.2d6cbb3e.chunk.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.168.2d6cbb3e.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -337,13 +236,13 @@
       ],
       "path": "bundles/bloxd.io/main.js",
       "publish_filter": false,
-      "sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
-      "source_filename": "gw4e3a.main.937868ec.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.main.937868ec.js"
+      "sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580",
+      "source_filename": "u88b9b.main.1969c480.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.main.1969c480.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": "165",
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -366,13 +265,13 @@
       ],
       "path": "bundles/bloxd.io/chunks/js/165.js",
       "publish_filter": false,
-      "sha256": "4b953346702e97f649c6a4f74dbb73afe45ad91ae035b380deaaa28adf57e36d",
-      "source_filename": "gw4e3a.165.898e1c65.chunk.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.165.898e1c65.chunk.js"
+      "sha256": "05535f87b1a72d6379d4bda664c543445f58a223e8b716a6b1bf730225605cd3",
+      "source_filename": "u88b9b.165.8a567ea1.chunk.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.165.8a567ea1.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:36+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:52:36+09:00",
       "chunk_id": "164",
       "confidence": "high",
       "detector_id": "coolmathgames-video-adapter",
@@ -398,13 +297,13 @@
       ],
       "path": "bundles/bloxd.io/chunks/js/164.js",
       "publish_filter": false,
-      "sha256": "0db8195ccade0df6f04bc36c4000ddafa57fac9b014634836076ca24cb6b89ba",
-      "source_filename": "gw4e3a.164.1d8fd466.chunk.js",
-      "source_url": "https://bloxd.io/static/js/gw4e3a.164.1d8fd466.chunk.js"
+      "sha256": "cf8c032a8c8e86482f66e154c04a82ac7144ba4f30a43b06525741ef4e2fcf25",
+      "source_filename": "u88b9b.164.ae946fec.chunk.js",
+      "source_url": "https://bloxd.io/static/js/u88b9b.164.ae946fec.chunk.js"
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -433,7 +332,7 @@
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": "166",
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -465,7 +364,7 @@
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": "168",
       "confidence": "high",
       "detector_id": "aditude-instream-adapter",
@@ -493,7 +392,7 @@
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -522,7 +421,7 @@
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": "165",
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -551,7 +450,7 @@
     },
     {
       "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:37+09:00",
+      "checked_at": "2026-11-27T18:53:22+09:00",
       "chunk_id": "164",
       "confidence": "high",
       "detector_id": "coolmathgames-video-adapter",
@@ -582,8 +481,8 @@
       "source_url": "https://preprod.bloxd.io/static/js/gw4e3a.164.1d8fd466.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -606,13 +505,13 @@
       ],
       "path": "bundles/staging.bloxd.io/main.js",
       "publish_filter": false,
-      "sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
-      "source_filename": "gw4e3a.main.937868ec.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.main.937868ec.js"
+      "sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580",
+      "source_filename": "u88b9b.main.1969c480.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.main.1969c480.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": "166",
       "confidence": "high",
       "detector_id": "adinplay-video-adapter",
@@ -638,13 +537,13 @@
       ],
       "path": "bundles/staging.bloxd.io/chunks/js/166.js",
       "publish_filter": false,
-      "sha256": "c953c4afe44f056073f3d2e58b449fa8cfb8322301266ba919dc19281769c19d",
-      "source_filename": "gw4e3a.166.9f8f3be5.chunk.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.166.9f8f3be5.chunk.js"
+      "sha256": "9c6e513dd5698cd55acfb05ea9bc05ac82c4abf1171e306a77f25263951fc55c",
+      "source_filename": "u88b9b.166.ff5648a1.chunk.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.166.ff5648a1.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": "168",
       "confidence": "high",
       "detector_id": "aditude-instream-adapter",
@@ -666,13 +565,13 @@
       ],
       "path": "bundles/staging.bloxd.io/chunks/js/168.js",
       "publish_filter": false,
-      "sha256": "80710632db0bfe7912fdeb2d19c4740bb24acf285e57a852c677231db6afa0ab",
-      "source_filename": "gw4e3a.168.a0d839cc.chunk.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.168.a0d839cc.chunk.js"
+      "sha256": "72ba201421081669ddbaf43d2e15f5b67a828729887db2b19ef26f8af7b3d237",
+      "source_filename": "u88b9b.168.2d6cbb3e.chunk.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.168.2d6cbb3e.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": null,
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -695,13 +594,13 @@
       ],
       "path": "bundles/staging.bloxd.io/main.js",
       "publish_filter": false,
-      "sha256": "1f5157b63c4b37e0a779540df5521849bc41f050db6f7b64643a8a9d4e9f5c82",
-      "source_filename": "gw4e3a.main.937868ec.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.main.937868ec.js"
+      "sha256": "291cf72eda78a2ca1d0299d238787189d88202990232b3f299ddb510023c4580",
+      "source_filename": "u88b9b.main.1969c480.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.main.1969c480.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": "165",
       "confidence": "high",
       "detector_id": "admob-mobile-adapter",
@@ -724,13 +623,13 @@
       ],
       "path": "bundles/staging.bloxd.io/chunks/js/165.js",
       "publish_filter": false,
-      "sha256": "4b953346702e97f649c6a4f74dbb73afe45ad91ae035b380deaaa28adf57e36d",
-      "source_filename": "gw4e3a.165.898e1c65.chunk.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.165.898e1c65.chunk.js"
+      "sha256": "05535f87b1a72d6379d4bda664c543445f58a223e8b716a6b1bf730225605cd3",
+      "source_filename": "u88b9b.165.8a567ea1.chunk.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.165.8a567ea1.chunk.js"
     },
     {
-      "build": "gw4e3a.937868ec",
-      "checked_at": "2026-11-27T02:11:38+09:00",
+      "build": "u88b9b.1969c480",
+      "checked_at": "2026-11-27T18:53:23+09:00",
       "chunk_id": "164",
       "confidence": "high",
       "detector_id": "coolmathgames-video-adapter",
@@ -756,9 +655,9 @@
       ],
       "path": "bundles/staging.bloxd.io/chunks/js/164.js",
       "publish_filter": false,
-      "sha256": "0db8195ccade0df6f04bc36c4000ddafa57fac9b014634836076ca24cb6b89ba",
-      "source_filename": "gw4e3a.164.1d8fd466.chunk.js",
-      "source_url": "https://staging.bloxd.io/static/js/gw4e3a.164.1d8fd466.chunk.js"
+      "sha256": "cf8c032a8c8e86482f66e154c04a82ac7144ba4f30a43b06525741ef4e2fcf25",
+      "source_filename": "u88b9b.164.ae946fec.chunk.js",
+      "source_url": "https://staging.bloxd.io/static/js/u88b9b.164.ae946fec.chunk.js"
     }
   ],
   "schema_version": 1,
@@ -773,8 +672,8 @@
     "environments": 3,
     "filter_rules": 14,
     "javascript_assets": 2103,
-    "new_hashes_scanned": 0,
+    "new_hashes_scanned": 701,
     "static_filter_rules": 14,
-    "unique_hashes": 701
+    "unique_hashes": 1402
   }
 }

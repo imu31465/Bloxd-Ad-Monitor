@@ -2,7 +2,7 @@
 ! Description: Fixed Bloxd ad filters plus automatically tracked video-ad adapter chunks.
 ! Homepage: https://github.com/imu31465/Bloxd-Ad-Monitor
 ! Expires: 1 hour
-! Last generated: 2026-11-27T03:07:55Z
+! Last generated: 2026-11-27T12:06:18Z
 ! Source manifest: https://raw.githubusercontent.com/imu31465/Bloxd-Build-Monitor/main/.monitor-state.json
 ! Static provider, cosmetic, and supported scriptlet rules are maintained in config/static-filters.txt.
 ! Dynamic chunk rules are emitted only for high-confidence isolated lazy-loaded adapters.
